@@ -73,13 +73,20 @@ class ConcreteModel implements PresentableInterface
     
     /** @var string */
     public $birthDate;
+    
+    /** @var ConcreteModelPresenter */
+    protected $presenter;
 
     /**
      * @return ConcreteModelPresenter
      */
     public function presenter()
     {
-        return new ConcreteModelPresenter($this);
+        if ($this->presenter === null) {
+            $this->presenter = new ConcreteModelPresenter($this);
+        }
+    
+        return $this->presenter;
     }
 }
 ```
