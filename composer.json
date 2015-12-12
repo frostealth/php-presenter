@@ -1,0 +1,22 @@
+{
+    "name": "frostealth/php-presenter",
+    "description": "Simple View Presenters",
+    "keywords": ["presenter"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Kudinov",
+            "email": "i.kudinov@frostealth.ru",
+            "homepage": "http://frostealth.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "frostealth\\presenter\\": "src/"
+        }
+    }
+}
