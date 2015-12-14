@@ -29,7 +29,7 @@ class Decorator implements DecoratorInterface
         }
 
         $result = $value;
-        if (is_array($value) || ($value instanceof \Traversable && $value instanceof \ArrayAccess)) {
+        if (is_array($value)) {
             $result = [];
             foreach ($value as $k => $v) {
                 $result[$k] = $this->decorate($v);
